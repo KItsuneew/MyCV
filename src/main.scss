@@ -1,0 +1,46 @@
+@import 
+    '/src/vendors/normalize',
+    '/src/vendors/global';
+
+
+@font-face {
+    font-family: 'HelveticaRegular' ;
+    src: url('./fonts/HelveticaRegular/HelveticaRegular.eot');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('./fonts/HelveticaBold/HelveticaBold.eot');
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+    background-color: #19173a;;
+    font-family: 'HelveticaRegular';
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding-top: 35px;
+    &__nav {
+        color: #fff;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+
+}

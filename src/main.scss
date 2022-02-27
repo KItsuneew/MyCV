@@ -108,6 +108,8 @@ body {
     font-size: 2.5rem;
     text-transform: uppercase;
     padding-bottom: 15px;
+    font-family: 'HelveticaBold';
+    font-weight: 700;
 }
 
 .about__me {
@@ -187,6 +189,30 @@ body {
 
 }
 
+.soc {
+    &__cont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+
+.footer {
+    padding-bottom: 35px;
+    &__link {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__course {
+        width: 10rem;
+    }
+}
 
 .gradient__frame {
     position: relative;

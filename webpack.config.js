@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -13,6 +14,7 @@ const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader
 
 
 const config = {
+    target: 'web',
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -27,7 +29,8 @@ const config = {
         }),
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false
-        })
+        }),
+        new LiveReloadPlugin(),
 
     ],
     module: {
@@ -44,6 +47,10 @@ const config = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

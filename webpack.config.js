@@ -2,7 +2,6 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -17,7 +16,9 @@ const config = {
     target: 'web',
     entry: './src/index.ts',
     output: {
+        filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: './'
     },
     devServer: {
         open: true,
@@ -30,7 +31,9 @@ const config = {
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: false
         }),
-        new LiveReloadPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css',
+        }),
 
     ],
     module: {
@@ -53,8 +56,13 @@ const config = {
                 loader: 'html-loader',
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
+                test: /\.(svg|png|jpg|gif|webp)$/i,
+                type: 'asset/inline',
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
+
             },
         ],
     },
@@ -66,9 +74,6 @@ const config = {
 module.exports = () => {
     if (isProduction) {
         config.mode = 'production';
-
-        config.plugins.push(new MiniCssExtractPlugin());
-
 
     } else {
         config.mode = 'development';

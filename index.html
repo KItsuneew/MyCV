@@ -107,7 +107,7 @@
                         <li class="port__item"><a href="https://portfolio-vm4321minus.netlify.app/" target="_blank">
                                 <p class="port__text stack">Portfolio</p>
                                 <p class="port__stack stack">Stack: html,css,js</p>
-                                <img src="./src/assets/port.jpg" alt="port">
+                                <img src="./src/assets/port.webp" alt="port">
                             </a></li>
                         <li class="port__item"><a href="https://romantic-darwin-600525.netlify.app/" target="_blank">
                                 <p class="port__text stack">Wildlife</p>
@@ -117,7 +117,7 @@
                         <li class="port__item"><a href="https://vm4321minus-js30-1.netlify.app/" target="_blank">
                                 <p class="port__text stack">Player</p>
                                 <p class="port__stack stack">Stack: html,css,js</p>
-                                <img src="./src/assets/player.jpg" alt="port">
+                                <img src="./src/assets/port.webp" alt="port">
                             </a></li>
                     </div>
                 </ul>
@@ -136,14 +136,14 @@
                 let mid;
                 let result = -1;
                         
-                while (left <& right) {
+                while (left &lt;& right) {
                     mid = Math.round(left + (right - left) / 2);
                         
                     if (arr[mid] == mid) {
                         result = mid;
                         right = mid - 1;
                     }
-                    else if (mid < arr[mid]) {
+                    else if (mid &lt; arr[mid]) {
                         right = mid - 1;
                     }
                     else {

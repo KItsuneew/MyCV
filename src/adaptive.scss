@@ -97,3 +97,27 @@
     }
 
 }
+
+@media (max-width: 751px) {
+    body  .inf {
+        &__cont {
+            text-align: center;
+        }
+        &__sp {
+            font-size: 3rem;
+        }
+
+        &__me {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 561px) {
+    .header__nav {
+        width: 100%;
+    }
+    .title {
+        text-align: center;
+    }
+}

@@ -9,7 +9,6 @@ function clickBurger() {
     navContent.classList.toggle('active');
     btnBurger.classList.toggle('btn__active');
     changeRoot();
-  
 }
 
 function clickLink() {

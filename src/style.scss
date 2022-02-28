@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'HelveticaRegular' ;
+    src: url('./fonts/HelveticaRegular/HelveticaRegular.eot');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('./fonts/HelveticaBold/HelveticaBold.eot');
+    font-style: normal;
+    font-weight: 700;
+}
+
+:root {
+    --osn-color: #88485b;
+    --bg-color: #19173a;
+    --pos: absolute;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #19173a;;
+    font-family: 'HelveticaRegular';
+    color: #fff;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding: 35px 0;
+    border-bottom: 1px solid #fff;
+    &__nav {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+
+        li {
+            &:not(:last-child) {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &__link {
+      transition: .4s;
+      &:hover {
+          color: var(--osn-color)
+      }
+        
+    }
+}
+
+.padd {
+    padding-top: 35px;
+}
+
+.home {
+    &__inf {
+        display: flex;
+        font-family: 'HelveticaBolg';
+        font-weight: 700;
+        column-gap: 17rem;
+    }
+
+    &__img {
+        height: 33rem;
+        object-fit: contain;
+        border-radius: 35px;
+    }
+}
+
+
+.inf {
+    &__me {
+        font-size: 4rem;
+        transform: translate(-10rem, 6rem);
+    }
+    &__sp {
+        animation: flow 20s ease infinite;
+        font-size: 5rem;
+        background: linear-gradient(90deg, rgb(201, 193, 198) 0%, rgb(137, 72, 92) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__skills {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__polos {
+        height: .8rem;
+        width: 60%;
+        background-color: #fff;
+        position: relative;
+         
+        span {
+            position: absolute;
+            height: .8rem;
+            background-color:var(--osn-color);
+        }
+    }
+
+
+}
+
+
+.title {
+    color: var(--osn-color);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    font-family: 'HelveticaBold';
+    font-weight: 700;
+}
+
+.about__me {
+    font-size: 1.5rem;
+
+}
+
+.hl {
+    width: 80%;
+}
+
+.css {
+    width: 75%;
+}
+
+.js {
+    width: 69%;
+}
+
+.ts {
+    width: 40%;
+}
+
+.git {
+    width: 65%;
+}
+
+.eng {
+    width: 40%;
+}
+
+.active {
+    right: 0;
+}
+
+
+.port {
+    &__container {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        column-gap: 13%;
+        row-gap: 2%;
+        justify-content: center;
+    }
+
+    &__item {
+      
+        img {
+            width: 100%;
+            &:hover {
+                opacity: .4;
+                transition: .4s;
+            }
+        }
+
+    }
+    &__item:hover .stack {
+        opacity: 1;
+    }
+
+    &__stack {
+        transform: translate(6rem,7rem);
+
+
+    }
+    &__text {
+        transform: translate(9rem,5rem);
+    }
+
+  
+}
+.stack {
+    position: absolute;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    display: none;
+    transition: .4s;
+}
+
+.hljs {
+    background: #242b44;
+
+}
+
+.soc {
+    &__cont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__link {
+        transition: .4s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+
+.footer {
+    padding-bottom: 35px;
+    &__link {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__course {
+        width: 10rem;
+    }
+}
+
+.menu__icon {
+    display: none;
+}
+
+.gradient__frame {
+    position: relative;
+    padding: 1em 2em;
+    background-color: #19173a;
+    border-radius: .125em;
+    
+    &::after {
+        content:'';
+        z-index: -1;
+        position: absolute;
+        top: -.125em;
+        left: -.125em;
+        width: calc(100% + .25em);
+        height: calc(100% + .25em);
+        border-radius: .25em;
+        background: linear-gradient(45deg,#f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        background-size: 200%;
+        animation: animateborder 4s ease infinite;
+    }
+}
+
+@keyframes animateborder {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}

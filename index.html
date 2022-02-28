@@ -16,31 +16,34 @@
 <body>
     <header class="header">
         <div class="container">
-            <nav>
+            <div class="menu__icon">
+                <span></span>
+            </div>
+            <nav class="header__cont">
                 <ul class="header__nav">
-                    <li><a class="header__link" href="#">Home</a></li>
-                    <li><a class="header__link" href="#">About me</a></li>
-                    <li><a class="header__link" href="#">Skilss</a></li>
-                    <li><a class="header__link" href="#">Portfolio</a></li>
-                    <li><a class="header__link" href="#">Code</a></li>
-                    <li><a class="header__link" href="#">Contacts</a></li>
+                    <li><a class="header__link" href="#home">Home</a></li>
+                    <li><a class="header__link" href="#about">About me</a></li>
+                    <li><a class="header__link" href="#skills">Skills</a></li>
+                    <li><a class="header__link" href="#port">Portfolio</a></li>
+                    <li><a class="header__link" href="#code">Code</a></li>
+                    <li><a class="header__link" href="#cnt">Contacts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <section class="section__home padd">
+        <section class="section__home padd" id="home">
             <div class="container">
                 <div class="home__inf">
                     <img class="home__img" src="/src/assets/bg.jpg" alt="img">
-                    <div>
-                        <span class="inf__sp">Hi, you're on my CV page</span>
+                    <div class="inf__cont">
+                        <p class="inf__sp">Hi, you're on my CV page</p>
                         <h3 class="inf__me">I'm Stanislaw aka Kitsune</h3>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section__about padd">
+        <section class="section__about padd" id="about">
             <div class="container">
                 <h4 class="title">About me</h4>
                 <p class="about__me gradient__frame">I lives in Belarus, in Brest One of my goals is to keep doing what
@@ -51,7 +54,7 @@
                     goal is to gain knowledge in the field of front-end development.</p>
             </div>
         </section>
-        <section class="section__skills padd">
+        <section class="section__skills padd" id="skills">
             <div class="container">
                 <h4 class="title">Skills</h4>
                 <ul class="gradient__frame">
@@ -94,7 +97,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section__port padd">
+        <section class="section__port padd" id="port">
             <div class="container">
                 <h4 class="title">Portfolio</h4>
                 <ul class="gradient__frame">
@@ -123,7 +126,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section__code padd">
+        <section class="section__code padd" id="code">
             <div class="container">
                 <h4 class="title">Code</h4>
                 <div class="gradient__frame">
@@ -157,19 +160,20 @@
                 </div>
             </div>
         </section>
-        <section class="section__contacts padd">
+        <section class="section__contacts padd" id="cnt">
             <div class="container">
                 <h4 class="title">Contacts</h4>
                 <div class="gradient__frame">
                     <ul class="soc__cont">
-                        <li><a href="https://www.instagram.com/suicideevese/" target="_blank"><img class="soc__img"
-                                    src="./src/assets/inst.svg" alt="inst"></a></li>
-                        <li><a href="https://t.me/Ire-Taki" target="_blank"><img class="soc__img"
+                        <li class="soc__link"><a href="https://www.instagram.com/suicideevese/" target="_blank"><img
+                                    class="soc__img" src="./src/assets/inst.svg" alt="inst"></a></li>
+                        <li class="soc__link"><a href="https://t.me/Ire-Taki" target="_blank"><img class="soc__img"
                                     src="./src/assets/tg.svg" alt="telegram"></a>
                         </li>
-                        <li><a href="https://vk.com/vm4321minus" target="_blank"><img class="soc__img"
+                        <li class="soc__link"><a href="https://vk.com/vm4321minus" target="_blank"><img class="soc__img"
                                     src="./src/assets/vk.svg" alt="vk"></a></li>
-                        <li><a href="https://open.spotify.com/user/h0y35647pfx661yeit6olb4j8?si=bd94402df1364dc1"
+                        <li class="soc__link"><a
+                                href="https://open.spotify.com/user/h0y35647pfx661yeit6olb4j8?si=bd94402df1364dc1"
                                 target="_blank"><img class="soc__img" src="./src/assets/spotify.svg" alt="spotify"></a>
                         </li>
                     </ul>
@@ -180,9 +184,10 @@
     <footer class="footer padd">
         <div class="container">
             <ul class="footer__link">
-                <li><a href="https://github.com/vm4321minus" target="_blank"><img src="./src/assets/gh.svg" alt=""></a>
+                <li class="soc__link"><a href="https://github.com/vm4321minus" target="_blank"><img
+                            src="./src/assets/gh.svg" alt=""></a>
                 </li>
-                <li><a href="https://rs.school/js/" target="_blank"><img class="footer__course"
+                <li class="soc__link"><a href="https://rs.school/js/" target="_blank"><img class="footer__course"
                             src="./src/assets/course.svg" alt=""></a></li>
             </ul>
         </div>

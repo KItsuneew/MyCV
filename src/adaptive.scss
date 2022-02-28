@@ -1,0 +1,99 @@
+@media (max-width: 1145px) {
+    body  .inf {
+        &__sp {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .home {
+        &__inf {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    body .inf {
+        &__me {
+            transform: translate(0,0);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body .header {
+        border-bottom: none;
+    }
+    body .menu {
+        &__icon {
+            display: block;
+            position: var(--pos);
+            width: 39px;
+            height: 31px;
+            cursor: pointer;
+            right: 6%;
+            z-index: 6;
+
+            &::before, &::after, span {
+                right: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: .4s;
+                background-color: #fff;
+            }
+
+            &::before, &::after {
+                content: "";
+            }
+            &::before {
+                top: 0;
+
+            }
+            &::after {
+                bottom: 0;
+            }
+            span {
+                top:50%;
+                transform: translate(0,-50%);
+            }
+
+            &.btn__active span {
+                transform: scale(0) translate(0,-50%);
+            }
+            &.btn__active::before {
+                top:50%;
+                transform: rotate(-45deg) translate(0,-50%);
+            }
+            &.btn__active::after {
+                bottom: 44%;
+                transform: rotate(45deg) translate(0,50%);
+            }
+           
+        }
+    
+    }
+    .header__nav {
+        z-index: 5;
+        flex-direction: column;
+        position: fixed;
+        top:0;
+        right: -100%;
+        width: 69%;
+        height: 100%;
+        background-color: #000000c4;
+        font-size: 2.5rem;
+        transition: all .6s;
+
+        li {
+            transform: translateY(-5rem);
+            padding-left: 50px;
+            &:not(:last-child) {
+                padding-bottom: 1.3rem;
+            }
+        }
+        
+    }
+
+}

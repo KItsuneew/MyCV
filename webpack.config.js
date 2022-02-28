@@ -18,7 +18,7 @@ const config = {
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: './'
+        assetModuleFilename: 'assets/[name][ext]',
     },
     devServer: {
         open: true,
@@ -57,12 +57,7 @@ const config = {
             },
             {
                 test: /\.(svg|png|jpg|gif|webp)$/i,
-                type: 'asset/inline',
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]',
-                },
-
+                type: 'asset',
             },
         ],
     },

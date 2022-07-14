@@ -19,6 +19,25 @@
             transform: translate(0,0);
         }
     }
+
+    .port {
+        &__container {
+            grid-template-columns: auto !important;
+        }
+
+        &__item img {
+            height: auto !important;
+        }
+    }
+}
+
+
+@media(max-width:800px) {
+    .section {
+        &__code {
+            font-size: 12px;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -119,5 +138,25 @@
     }
     .title {
         text-align: center;
+    }
+}
+
+
+@media(max-width:450px) {
+    .inf {
+        &__skills {
+            flex-direction: column;
+        }
+    }
+
+   
+}
+
+@media(max-width:380px) {
+    .soc {
+        &__cont {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

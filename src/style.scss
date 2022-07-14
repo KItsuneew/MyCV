@@ -168,7 +168,6 @@ body {
         display: grid;
         grid-template-columns: 40% 40%;
         column-gap: 13%;
-        row-gap: 2%;
         justify-content: center;
     }
 
@@ -176,6 +175,7 @@ body {
       
         img {
             width: 100%;
+            height: 226px;
             &:hover {
                 opacity: .4;
                 transition: .4s;

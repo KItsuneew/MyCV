@@ -133,28 +133,27 @@
                     <pre>
                         <code class="language-js hljs">
                             
-            function indexEqualsValue(arr) {
-                let left = 0;
-                let right = arr.length - 1;
-                let mid;
-                let result = -1;
+function indexEqualsValue(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    let mid;
+    let result = -1;
                         
-                while (left &lt;& right) {
-                    mid = Math.round(left + (right - left) / 2);
-                        
-                    if (arr[mid] == mid) {
-                        result = mid;
-                        right = mid - 1;
-                    }
-                    else if (mid &lt; arr[mid]) {
-                        right = mid - 1;
-                    }
-                    else {
-                        left = mid + 1;
-                    }
-                }
-                return result;
-                }
+    while (left &lt;& right) {
+        mid = Math.round(left + (right - left) / 2);          
+            if (arr[mid] == mid) {
+                result = mid;
+                right = mid - 1;
+            }
+            else if (mid &lt; arr[mid]) {
+                right = mid - 1;
+            }
+            else {
+                left = mid + 1;
+            }
+    }
+    return result;
+}
                         </code>
                     </pre>
                 </div>
